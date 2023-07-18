@@ -1,0 +1,188 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000000000000, pid=14596, tid=16088
+#
+# JRE version: Java(TM) SE Runtime Environment (20.0.1+9) (build 20.0.1+9-29)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.0.1+9-29, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [dwrite.dll+0x4e3c5]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:E:\david\Courses\New folder\IntelliJ IDEA 2023.1.3\lib\idea_rt.jar=61344:E:\david\Courses\New folder\IntelliJ IDEA 2023.1.3\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 --module-path=C:\Users\daveb\.m2\repository\org\openjfx\javafx-base\20\javafx-base-20-win.jar;C:\Users\daveb\.m2\repository\org\openjfx\javafx-fxml\20\javafx-fxml-20-win.jar;C:\Users\daveb\.m2\repository\org\openjfx\javafx-graphics\20\javafx-graphics-20-win.jar;C:\Users\daveb\Documents\InventoryManagementSystem\target\classes;C:\Users\daveb\.m2\repository\org\openjfx\javafx-controls\20\javafx-controls-20-win.jar -Djdk.module.main=com.example.inventorymanagementsystem com.example.inventorymanagementsystem/com.example.inventorymanagementsystem.HelloApplication
+
+Host: AMD Ryzen 5 4600H with Radeon Graphics         , 12 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3155)
+Time: Tue Jul 18 10:14:32 2023 Coordinated Universal Time elapsed time: 11.140412 seconds (0d 0h 0m 11s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000250fe584610):  JavaThread "QuantumRenderer-0" daemon [_thread_in_native, id=16088, stack(0x000000c7e1b00000,0x000000c7e1c00000)]
+
+Stack: [0x000000c7e1b00000,0x000000c7e1c00000],  sp=0x000000c7e1bfd2d0,  free space=1012k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.sun.javafx.font.directwrite.OS.EndDraw(J)I+0 javafx.graphics@20
+j  com.sun.javafx.font.directwrite.ID2D1RenderTarget.EndDraw()I+4 javafx.graphics@20
+j  com.sun.javafx.font.directwrite.DWGlyph.getD2DMask(FFZ)[B+313 javafx.graphics@20
+j  com.sun.javafx.font.directwrite.DWGlyph.getPixelData(I)[B+98 javafx.graphics@20
+j  com.sun.prism.impl.GlyphCache.getCachedGlyph(II)Lcom/sun/prism/impl/GlyphCache$GlyphData;+96 javafx.graphics@20
+j  com.sun.prism.impl.GlyphCache.render(Lcom/sun/prism/impl/BaseContext;Lcom/sun/javafx/scene/text/GlyphList;FFIILcom/sun/prism/paint/Color;Lcom/sun/prism/paint/Color;Lcom/sun/javafx/geom/transform/BaseTransform;Lcom/sun/javafx/geom/BaseBounds;)V+157 javafx.graphics@20
+j  com.sun.prism.impl.ps.BaseShaderGraphics.drawString(Lcom/sun/javafx/scene/text/GlyphList;Lcom/sun/javafx/font/FontStrike;FFLcom/sun/prism/paint/Color;II)V+816 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGText.renderText(Lcom/sun/prism/Graphics;Lcom/sun/javafx/font/FontStrike;Lcom/sun/javafx/geom/BaseBounds;Lcom/sun/prism/paint/Color;I)V+198 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGText.renderContent2D(Lcom/sun/prism/Graphics;Z)V+238 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGShape.renderContent(Lcom/sun/prism/Graphics;)V+454 javafx.graphics@20
+J 2310 c1 com.sun.javafx.sg.prism.NGNode.doRender(Lcom/sun/prism/Graphics;)V javafx.graphics@20 (473 bytes) @ 0x00000250803ea71c [0x00000250803e8dc0+0x000000000000195c]
+j  com.sun.javafx.sg.prism.NGNode.render(Lcom/sun/prism/Graphics;)V+35 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGGroup.renderContent(Lcom/sun/prism/Graphics;)V+151 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGRegion.renderContent(Lcom/sun/prism/Graphics;)V+111 javafx.graphics@20
+J 2310 c1 com.sun.javafx.sg.prism.NGNode.doRender(Lcom/sun/prism/Graphics;)V javafx.graphics@20 (473 bytes) @ 0x00000250803ea71c [0x00000250803e8dc0+0x000000000000195c]
+j  com.sun.javafx.sg.prism.NGNode.render(Lcom/sun/prism/Graphics;)V+35 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGGroup.renderContent(Lcom/sun/prism/Graphics;)V+151 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGRegion.renderContent(Lcom/sun/prism/Graphics;)V+111 javafx.graphics@20
+J 2310 c1 com.sun.javafx.sg.prism.NGNode.doRender(Lcom/sun/prism/Graphics;)V javafx.graphics@20 (473 bytes) @ 0x00000250803ea71c [0x00000250803e8dc0+0x000000000000195c]
+j  com.sun.javafx.sg.prism.NGNode.render(Lcom/sun/prism/Graphics;)V+35 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGGroup.renderContent(Lcom/sun/prism/Graphics;)V+151 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGRegion.renderContent(Lcom/sun/prism/Graphics;)V+111 javafx.graphics@20
+J 2310 c1 com.sun.javafx.sg.prism.NGNode.doRender(Lcom/sun/prism/Graphics;)V javafx.graphics@20 (473 bytes) @ 0x00000250803ea71c [0x00000250803e8dc0+0x000000000000195c]
+j  com.sun.javafx.sg.prism.NGNode.render(Lcom/sun/prism/Graphics;)V+35 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGGroup.renderContent(Lcom/sun/prism/Graphics;)V+151 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGRegion.renderContent(Lcom/sun/prism/Graphics;)V+111 javafx.graphics@20
+J 2310 c1 com.sun.javafx.sg.prism.NGNode.doRender(Lcom/sun/prism/Graphics;)V javafx.graphics@20 (473 bytes) @ 0x00000250803ea71c [0x00000250803e8dc0+0x000000000000195c]
+j  com.sun.javafx.sg.prism.NGNode.render(Lcom/sun/prism/Graphics;)V+35 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGGroup.renderContent(Lcom/sun/prism/Graphics;)V+151 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGRegion.renderContent(Lcom/sun/prism/Graphics;)V+111 javafx.graphics@20
+J 2310 c1 com.sun.javafx.sg.prism.NGNode.doRender(Lcom/sun/prism/Graphics;)V javafx.graphics@20 (473 bytes) @ 0x00000250803ea71c [0x00000250803e8dc0+0x000000000000195c]
+j  com.sun.javafx.sg.prism.NGNode.render(Lcom/sun/prism/Graphics;)V+35 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGGroup.renderContent(Lcom/sun/prism/Graphics;)V+151 javafx.graphics@20
+j  com.sun.javafx.sg.prism.NGRegion.renderContent(Lcom/sun/prism/Graphics;)V+111 javafx.graphics@20
+J 2310 c1 com.sun.javafx.sg.prism.NGNode.doRender(Lcom/sun/prism/Graphics;)V javafx.graphics@20 (473 bytes) @ 0x00000250803ea71c [0x00000250803e8dc0+0x000000000000195c]
+j  com.sun.javafx.sg.prism.NGNode.render(Lcom/sun/prism/Graphics;)V+35 javafx.graphics@20
+j  com.sun.javafx.tk.quantum.ViewPainter.doPaint(Lcom/sun/prism/Graphics;Lcom/sun/javafx/sg/prism/NodePath;)V+202 javafx.graphics@20
+j  com.sun.javafx.tk.quantum.ViewPainter.paintImpl(Lcom/sun/prism/Graphics;)V+976 javafx.graphics@20
+j  com.sun.javafx.tk.quantum.PresentingPainter.run()V+331 javafx.graphics@20
+j  java.util.concurrent.Executors$RunnableAdapter.call()Ljava/lang/Object;+4 java.base@20.0.1
+j  java.util.concurrent.FutureTask.runAndReset()Z+44 java.base@20.0.1
+j  com.sun.javafx.tk.RenderJob.run()V+1 javafx.graphics@20
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+92 java.base@20.0.1
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5 java.base@20.0.1
+j  com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run()V+8 javafx.graphics@20
+j  java.lang.Thread.runWith(Ljava/lang/Object;Ljava/lang/Runnable;)V+5 java.base@20.0.1
+j  java.lang.Thread.run()V+19 java.base@20.0.1
+v  ~StubRoutines::call_stub 0x000002508753100d
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), data execution prevention violation at address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000250ffd44a70, RCX=0x00000250ffd44820, RDX=0x00000250edf4edf8
+RSP=0x000000c7e1bfd2c8, RBP=0x000000c7e1bfd390, RSI=0x0000000000000000, RDI=0x00000250ffd44a70
+R8 =0x00000000ffffffff, R9 =0xffffffff00000000, R10=0x000000000000ffff, R11=0x000000c7e1bfd190
+R12=0x0000000000000003, R13=0x0000000000000000, R14=0x0000000000000000, R15=0x0000000000000000
+RIP=0x0000000000000000, EFLAGS=0x0000000000010202
+
+
+Register to memory mapping:
+
+RIP=0x0 is NULL
+RAX=0x0 is NULL
+RBX=0x00000250ffd44a70 points into unknown readable memory: 0x00007ffe90a1a5d8 | d8 a5 a1 90 fe 7f 00 00
+RCX=0x00000250ffd44820 points into unknown readable memory: 0x00000250ffdebb30 | 30 bb de ff 50 02 00 00
+RDX=0x00000250edf4edf8 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+RSP=0x000000c7e1bfd2c8 is pointing into the stack for thread: 0x00000250fe584610
+RBP=0x000000c7e1bfd390 is pointing into the stack for thread: 0x00000250fe584610
+RSI=0x0 is NULL
+RDI=0x00000250ffd44a70 points into unknown readable memory: 0x00007ffe90a1a5d8 | d8 a5 a1 90 fe 7f 00 00
+R8 =0x00000000ffffffff is pointing into object: Ljdk.internal.vm.FillerArray; 
+{0x00000000ffffffb8} - klass: {type array int}
+ - length: 14
+R9 =0xffffffff00000000 is an unknown value
+R10=0x000000000000ffff is an unknown value
+R11=0x000000c7e1bfd190 is pointing into the stack for thread: 0x00000250fe584610
+R12=0x0000000000000003 is an unknown value
+R13=0x0 is NULL
+R14=0x0 is NULL
+R15=0x0 is NULL
+
+
+Top of Stack: (sp=0x000000c7e1bfd2c8)
+0x000000c7e1bfd2c8:   00007ffe908de3c5 00000250ffd94550
+0x000000c7e1bfd2d8:   00007ffe9b34a5ff 00000250ffd78c00
+0x000000c7e1bfd2e8:   00000250ffd78c00 00000250ffd44440
+0x000000c7e1bfd2f8:   00007ffe908de32f 0000000000000000
+0x000000c7e1bfd308:   0000000000000000 00000250ffd44440
+0x000000c7e1bfd318:   0000000000000000 00000250ffd96e70
+0x000000c7e1bfd328:   00007ffe9b3752a8 0000000000000000
+0x000000c7e1bfd338:   00000250ffd95fd0 000000c7e1bfd390
+0x000000c7e1bfd348:   000000c7e1bfd540 000000c7e1bfd380
+0x000000c7e1bfd358:   000000c7e1bfd3d0 000000c7e1bfd3c0
+0x000000c7e1bfd368:   00007ffea19b47b1 0000000000000000
+0x000000c7e1bfd378:   0000000000000000 0000000000000000
+0x000000c7e1bfd388:   0000000000000000 000000c7e1bfd470
+0x000000c7e1bfd398:   00000250ffd95fc8 000000c7e1bfd478
+0x000000c7e1bfd3a8:   00000250ffd95fc8 0000000000000000
+0x000000c7e1bfd3b8:   00007ffe9b34b2a8 000000c7e1bfd501
+0x000000c7e1bfd3c8:   000000c7e1bfd410 0000025000000000
+0x000000c7e1bfd3d8:   00007ffe90d35291 00000250fe5848f0
+0x000000c7e1bfd3e8:   0000025000000000 0000000000000000
+0x000000c7e1bfd3f8:   0000000000000000 000002508f804d60
+0x000000c7e1bfd408:   0000000000000000 00000250ffd95fc8
+0x000000c7e1bfd418:   00007ffe9b46f100 00000250ffd61580
+0x000000c7e1bfd428:   0000000000000000 00000250ffd95fb8
+0x000000c7e1bfd438:   00007ffe9b32f5e1 00000250fe584610
+0x000000c7e1bfd448:   0000000000000000 00000250ffd95fb0
+0x000000c7e1bfd458:   00000250ffd95fb8 0000000000000000
+0x000000c7e1bfd468:   00007ffe9b45a5ed 0000000000000000
+0x000000c7e1bfd478:   0000000000000000 00000250ffd61580
+0x000000c7e1bfd488:   0000000000000000 00000250ffd61560
+0x000000c7e1bfd498:   0000025000001f80 000000c7e1bfd560
+0x000000c7e1bfd4a8:   000002508754de8a 0000000000000000
+0x000000c7e1bfd4b8:   0000025087551ff3 00000250ffd96240 
+
+Instructions: (pc=0x00007ffe908de3c5)
+0x00007ffe908de2c5:   07 38 14 00 0f 1f 44 00 00 8b c6 48 8b 5c 24 30
+0x00007ffe908de2d5:   48 8b 74 24 38 48 83 c4 20 5f c3 cc 0f b7 4f 66
+0x00007ffe908de2e5:   8b 43 30 03 8f e8 02 00 00 ff c8 23 c8 48 8b 43
+0x00007ffe908de2f5:   28 48 8d 14 c8 48 8b 02 48 85 c0 74 16 48 8d 88
+0x00007ffe908de305:   f8 02 00 00 48 3b c7 48 8b 01 75 22 48 89 02 44
+0x00007ffe908de315:   01 43 38 48 8b cb 48 ff 15 ae 37 14 00 0f 1f 44
+0x00007ffe908de325:   00 00 48 8b cf e8 11 00 00 00 33 c0 eb 9d 48 8b
+0x00007ffe908de335:   d1 eb c5 cc cc cc cc cc cc cc cc 40 53 48 83 ec
+0x00007ffe908de345:   20 48 8d 05 8b c2 13 00 48 8b d9 48 89 01 48 8d
+0x00007ffe908de355:   05 36 c2 13 00 48 89 41 08 48 8d 05 03 c2 13 00
+0x00007ffe908de365:   48 89 41 10 48 8d 05 48 c1 13 00 48 89 41 18 48
+0x00007ffe908de375:   8b 89 f0 02 00 00 48 85 c9 75 38 48 8b 4b 20 48
+0x00007ffe908de385:   85 c9 74 0d 48 8b 01 48 8b 40 10 ff 15 8a 3b 14
+0x00007ffe908de395:   00 48 8d 4b 30 e8 bd b0 02 00 48 8b cb 48 ff 15
+0x00007ffe908de3a5:   e7 3a 14 00 0f 1f 44 00 00 48 8b c3 48 83 c4 20
+0x00007ffe908de3b5:   5b c3 cc 48 8b 01 48 8b 40 10 ff 15 5b 3b 14 00
+0x00007ffe908de3c5:   eb b9 cc cc cc cc cc cc cc cc cc 48 8b c4 55 56
+0x00007ffe908de3d5:   57 41 56 41 57 48 8b ec 48 83 ec 50 48 c7 45 d0
+0x00007ffe908de3e5:   fe ff ff ff 48 89 58 10 4d 8b f1 44 8b fa 48 8b
+0x00007ffe908de3f5:   f9 41 8d 48 ff 48 83 7f 50 00 0f 84 e9 66 07 00
+0x00007ffe908de405:   48 8b 47 30 44 8b 40 38 45 85 c0 0f 84 d8 66 07
+0x00007ffe908de415:   00 3b 48 18 0f 83 cf 66 07 00 4c 8b 4f 10 8b 47
+0x00007ffe908de425:   28 4c 89 4d e0 89 45 e8 8b f1 49 8d 14 88 4c 8d
+0x00007ffe908de435:   45 30 48 8d 4d e0 e8 fc f7 00 00 84 c0 74 6f 48
+0x00007ffe908de445:   8b 45 30 8b 18 48 8d 4d 40 e8 61 04 00 00 90 41
+0x00007ffe908de455:   8d 4f ff 48 8d 05 01 f7 13 00 48 8b 04 c8 41 0f
+0x00007ffe908de465:   28 06 66 0f 7f 45 f0 0f 28 4d e0 66 0f 7f 4d e0
+0x00007ffe908de475:   48 8d 55 f0 48 8d 4d e0 ff 15 9d 3a 14 00 3b d8
+0x00007ffe908de485:   0f 85 53 66 07 00 48 8b 4f 50 c6 04 0e 01 48 8d
+0x00007ffe908de495:   4d 40 e8 98 03 00 00 b0 01 48 8b 9c 24 88 00 00
+0x00007ffe908de4a5:   00 48 83 c4 50 41 5f 41 5e 5f 5e 5d c3 cc 49 8b
+0x00007ffe908de4b5:   c9 e8 c9 4c 09 00 cc cc cc cc cc cc cc cc cc cc 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x00000250ffd94550 points into unknown readable memory: 0x00007ffe9b5e3030 | 30 30 5e 9b fe 7f 00 00
+stack at sp + 1 slots: 
