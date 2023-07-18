@@ -1,4 +1,6 @@
 package com.example.inventorymanagementsystem;
+//David Osei Boateng
+//10888204
 
 import javafx.beans.value.ObservableListValue;
 import javafx.collections.FXCollections;

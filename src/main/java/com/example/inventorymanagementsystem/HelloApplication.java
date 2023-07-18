@@ -1,4 +1,6 @@
 package com.example.inventorymanagementsystem;
+//David Osei Boateng
+//10888204
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
